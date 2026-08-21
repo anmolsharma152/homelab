@@ -1,0 +1,97 @@
+- name: Artificial Intelligence
+  columns:
+    - size: small
+      widgets:
+        - type: search
+          search-engine: google
+
+        - type: clock
+          time-format: 12h
+          show-seconds: false
+
+        - type: calendar
+          first-day-of-week: monday
+
+    - size: full
+      widgets:
+        - type: rss
+          title: AI Research Labs & Industry Newsletters
+          style: vertical-cards
+          limit: 10
+          collapse-after: 4
+          cache: 6h
+          feeds:
+            - url: https://huggingface.co/blog/feed.xml
+              title: Hugging Face Blog
+            - url: https://openai.com/news/rss.xml
+              title: OpenAI Research & News
+            - url: https://deepmind.google/blog/rss.xml
+              title: Google DeepMind Blog
+            - url: https://sakana.ai/feed.xml
+              title: Sakana AI Labs
+            - url: https://www.marktechpost.com/feed/
+              title: MarkTechPost AI
+            - url: https://importai.substack.com/feed
+              title: Import AI (Jack Clark)
+            - url: https://huyenchip.com/feed.xml
+              title: Chip Huyen AI Blog
+            - url: https://lilianweng.github.io/index.xml
+              title: Lilian Weng (OpenAI)
+
+        - type: rss
+          title: AI Researchers & Math/ML Visual Channels
+          style: horizontal-cards
+          limit: 10
+          collapse-after: 3
+          cache: 2h
+          feeds:
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw
+              title: 3Blue1Brown
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCtYLUTtgS3k1Fg4y5tAhLbw
+              title: StatQuest with Josh Starmer
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ
+              title: Andrej Karpathy
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew
+              title: Yannic Kilcher
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCSHZKyawb77ixDdsGog4iWA
+              title: Lex Fridman Podcast
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nqctg
+              title: Two Minute Papers
+
+        - type: rss
+          title: ArXiv Preprints (AI, ML, Robotics, RL & LLMs)
+          style: vertical-cards
+          limit: 10
+          collapse-after: 4
+          cache: 12h
+          feeds:
+            - url: https://rss.arxiv.org/rss/cs.AI
+              title: ArXiv Artificial Intelligence
+            - url: https://rss.arxiv.org/rss/cs.LG
+              title: ArXiv Machine Learning
+            - url: https://rss.arxiv.org/rss/cs.RO
+              title: ArXiv Robotics & Control
+            - url: https://rss.arxiv.org/rss/cs.CL
+              title: ArXiv Computation & Language (LLMs)
+            - url: https://rss.arxiv.org/rss/cs.CV
+              title: ArXiv Computer Vision
+
+    - size: small
+      widgets:
+        - type: weather
+          location: Jaipur, India
+          units: metric
+          hour-format: 12h
+
+        - type: releases
+          token: ${GITHUB_TOKEN}
+          cache: 12h
+          repositories:
+            - ollama/ollama
+            - open-webui/open-webui
+            - vllm-project/vllm
+            - huggingface/transformers
+            - huggingface/datasets
+            - langchain-ai/langchain
+            - run-llama/llama_index
+            - pytorch/pytorch

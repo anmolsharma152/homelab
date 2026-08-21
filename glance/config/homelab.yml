@@ -1,0 +1,66 @@
+- name: Homelab
+  columns:
+    - size: small
+      widgets:
+        - type: search
+          search-engine: google
+
+        - type: clock
+          time-format: 12h
+          show-seconds: false
+
+        - type: calendar
+          first-day-of-week: monday
+
+    - size: full
+      widgets:
+        - type: monitor
+          title: Active Homelab Services
+          sites:
+            - title: Arch Dashboard
+              url: https://homepage.archbox.local
+              check-url: http://homepage:3000
+            - title: Open WebUI
+              url: https://openwebui.archbox.local
+              check-url: http://open-webui:8080
+            - title: Odysseus AI
+              url: https://odysseus.archbox.local
+              check-url: http://odysseus-odysseus-1:7000
+            - title: SearXNG Search
+              url: https://search.archbox.local
+              check-url: http://searxng:8080
+            - title: AlgoDeck Workstation
+              url: https://algodeck.archbox.local
+              check-url: http://algodeck_app:3000
+            - title: Ntfy Notifications
+              url: https://ntfy.archbox.local
+              check-url: http://ntfy:80
+            - title: Glances System Monitor
+              url: https://glances.archbox.local
+              check-url: http://glances_metrics:61208
+
+        - type: rss
+          title: Self-Hosting & DevOps
+          limit: 10
+          cache: 6h
+          feeds:
+            - url: https://selfh.st/rss/
+              title: SelfHost Weekly
+            - url: https://dev.to/feed
+              title: Dev.to DevOps
+
+    - size: small
+      widgets:
+        - type: weather
+          location: Jaipur, India
+          units: metric
+          hour-format: 12h
+
+        - type: releases
+          token: ${GITHUB_TOKEN}
+          cache: 12h
+          repositories:
+            - glanceapp/glance
+            - gethomepage/homepage
+            - caddyserver/caddy
+            - nicolargo/glances

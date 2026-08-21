@@ -1,0 +1,41 @@
+- name: Home
+  columns:
+    - size: small
+      widgets:
+        - type: search
+          search-engine: google
+
+        - type: clock
+          time-format: 12h
+          show-seconds: false
+
+        - type: calendar
+          first-day-of-week: monday
+
+    - size: full
+      widgets:
+        - type: hacker-news
+          limit: 10
+
+        - type: lobsters
+          limit: 10
+
+    - size: small
+      widgets:
+        - type: weather
+          location: Jaipur, India
+          units: metric
+          hour-format: 12h
+
+        - type: markets
+          markets:
+            - symbol: SPY
+              name: S&P 500
+            - symbol: BTC-USD
+              name: Bitcoin
+            - symbol: NVDA
+              name: NVIDIA
+            - symbol: AAPL
+              name: Apple
+            - symbol: MSFT
+              name: Microsoft

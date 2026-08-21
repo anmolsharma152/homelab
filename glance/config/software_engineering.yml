@@ -1,0 +1,90 @@
+- name: Software Engineering
+  columns:
+    - size: small
+      widgets:
+        - type: search
+          search-engine: google
+
+        - type: clock
+          time-format: 12h
+          show-seconds: false
+
+        - type: calendar
+          first-day-of-week: monday
+
+    - size: full
+      widgets:
+        - type: rss
+          title: Systems Programming & Tutorials
+          limit: 10
+          collapse-after: 4
+          cache: 6h
+          feeds:
+            - url: https://dev.to/feed
+              title: Dev.to Backend & Systems
+            - url: https://ishadeed.com/feed.xml
+              title: Ahmad Shadeed Engineering
+            - url: https://feed.geeksforgeeks.org/
+              title: GeeksforGeeks Computer Science
+
+        - type: rss
+          title: CS Algorithms, Backend & System Design
+          style: horizontal-cards
+          limit: 10
+          collapse-after: 4
+          cache: 2h
+          feeds:
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UC9-y-6csu5WGm29I7JiwpnA
+              title: Computerphile
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UChWZsjdoRvZ0T9QWZOD6UpA
+              title: Hussein Nasser
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZgt6AzoyjslHTC9dz0UoTw
+              title: ByteByteGo
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCUyeluBRhGPCW4rPe_UvBZQ
+              title: ThePrimeagen
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCWX0cUR2rZcqKei1Vstww-A
+              title: Harkirat Singh
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UC2Xd-TjJByJyK2w1zNwY0zQ
+              title: Fireship
+
+        - type: rss
+          title: Backend Architecture & Engineering
+          style: horizontal-cards
+          limit: 10
+          collapse-after: 4
+          cache: 6h
+          feeds:
+            - url: https://blog.pragmaticengineer.com/rss/
+              title: Pragmatic Engineer
+            - url: https://blog.bytebytego.com/feed
+              title: ByteByteGo Newsletter
+            - url: https://ciechanow.ski/atom.xml
+              title: Bartholomew Ciechanowski
+            - url: https://samwho.dev/rss.xml
+              title: Sam Who Visual Systems
+            - url: https://www.joshwcomeau.com/rss.xml
+              title: Josh Comeau Software Engineering
+
+    - size: small
+      widgets:
+        - type: weather
+          location: Jaipur, India
+          units: metric
+          hour-format: 12h
+
+        - type: releases
+          token: ${GITHUB_TOKEN}
+          cache: 12h
+          repositories:
+            - golang/go
+            - rust-lang/rust
+            - neovim/neovim
+            - caddyserver/caddy
+            - docker/cli
+            - kubernetes/kubernetes
+            - redis/redis
+            - postgres/postgres
+            - torvalds/linux
+            - git/git
+            - nodejs/node
+            - ziglang/zig

@@ -10,3 +10,7 @@
 # Ignore live secrets
 **/.env
 !**/.env.example
+**/backups/
+*.sql.gz
+*.crt
+.playwright-mcp/

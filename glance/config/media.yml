@@ -1,0 +1,94 @@
+- name: Media
+  columns:
+    - size: small
+      widgets:
+        - type: search
+          search-engine: google
+
+        - type: clock
+          time-format: 12h
+          show-seconds: false
+
+        - type: calendar
+          first-day-of-week: monday
+
+    - size: full
+      widgets:
+        - type: rss
+          title: Top Tech News & Articles
+          style: vertical-cards
+          limit: 10
+          collapse-after: 4
+          cache: 6h
+          feeds:
+            - url: https://feeds.arstechnica.com/arstechnica/index
+              title: Ars Technica
+            - url: https://selfh.st/rss/
+              title: SelfHost Weekly
+
+        - type: rss
+          title: Financial, Tech Media & Science
+          style: horizontal-cards
+          limit: 10
+          collapse-after: 3
+          cache: 2h
+          feeds:
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA
+              title: Veritasium
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCK7tptUDHh-RYDsdxO1-5QQ
+              title: Wall Street Journal
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCknLrEdhRCp1aegoMqRaCZg
+              title: DW News
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZ4AMrDcNrfy3X6nsU8-rPg
+              title: Economics Explained
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCcefcZRL2oaA_uBNeo5UOWg
+              title: Y Combinator
+
+        - type: rss
+          title: Gaming, Tech & Hardware Reviews
+          style: horizontal-cards
+          limit: 6
+          collapse-after: 3
+          cache: 2h
+          feeds:
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UChIs72whgZI9w6d6FhwGGHA
+              title: Gamers Nexus
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw
+              title: Linus Tech Tips
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UC9PBzalIcEQCsiIkq36PyUA
+              title: Digital Foundry
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCZrxXp1reP8E353rZsB3jaA
+              title: Skill Up
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCKy1dAqELo0zrOtPkf0eTMw
+              title: IGN
+            - url: https://www.youtube.com/feeds/videos.xml?channel_id=UCbu2SsF-Or3Rsn3NxqODImw
+              title: GameSpot
+
+    - size: small
+      widgets:
+        - type: weather
+          location: Jaipur, India
+          units: metric
+          hour-format: 12h
+
+        - type: twitch-channels
+          channels:
+            - hasanabi
+            - xqc
+            - shroud
+            - loltyler1
+            - hollywoodbob
+            - chocotaco
+            - ishowspeed
+            - kaicenat
+            - jynxzi
+            - caedrel
+            - jankos
+            - lolnemesis
+            - summit1g
+            - theprimeagen
+            - j_blow
+            - giantwaffle
+            - cohhcarnage
+            - christitustech
+            - EJ_SA

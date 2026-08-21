@@ -1,0 +1,58 @@
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "SearXNG Local"
+
+search:
+  safe_search: 0
+  autocomplete: google
+  timeout: 1.5
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "dcc8a8dd23a8a6dde4cc0043e6cb5aee62f984fba2058f5eae562f0eac603e62"
+  limiter: false
+  image_proxy: true
+
+valkey:
+  url: redis://searxng-redis:6379/0
+
+ui:
+  default_theme: simple
+  theme_args:
+    simple_style: dark
+
+# This explicit block tells SearXNG to forcibly enable these exact backends
+engines:
+  - name: google
+    engine: google
+    shortcut: go
+    disabled: false
+    weight: 2
+
+  - name: brave
+    engine: brave
+    shortcut: br
+    disabled: false
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+
+  - name: arxiv
+    engine: arxiv
+    shortcut: ar
+    disabled: false
+
+outgoing:
+  request_timeout: 5.0
+  max_request_timeout: 15.0
+  pool_connections: 100
+  pool_maxsize: 20
+  enable_http2: false
+  source_ips:
+    - 0.0.0.0

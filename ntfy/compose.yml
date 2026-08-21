@@ -1,0 +1,21 @@
+services:
+  ntfy:
+    image: binwiederhier/ntfy:latest
+    container_name: ntfy
+    command: serve
+    ports:
+      - "127.0.0.1:8091:80"
+    volumes:
+      - ntfy_cache:/var/cache/ntfy
+      - ntfy_etc:/etc/ntfy
+    restart: "no"
+    networks:
+      - homelab
+
+volumes:
+  ntfy_cache:
+  ntfy_etc:
+
+networks:
+  homelab:
+    external: true
