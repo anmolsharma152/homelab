@@ -1,0 +1,60 @@
+- Active:
+    - AlgoDeck:
+        icon: mdi-code-tags
+        href: https://algodeck.archbox.local
+        description: Visual DSA Practice & Spaced-Repetition
+        server: my-local-server
+        container: algodeck_app
+    - Glance:
+        icon: glance
+        href: https://glance.archbox.local
+        description: Lightweight Feed Aggregator & Dashboard
+        server: my-local-server
+        container: glance
+    - PostgreSQL v16:
+        icon: postgresql
+        description: PostgreSQL v16 & pgvector Vector Engine
+        server: my-local-server
+        container: postgres
+    - Redis Cache:
+        icon: redis
+        description: Valkey / Redis High-Performance Cache
+        server: my-local-server
+        container: redis
+
+- Inactive:
+    - Open WebUI:
+        icon: open-webui
+        href: https://openwebui.archbox.local
+        description: Local LLM Interface (Ollama & Models)
+        server: my-local-server
+        container: open-webui
+    - Odysseus AI:
+        icon: mdi-robot-outline
+        href: https://odysseus.archbox.local
+        description: Autonomous Multi-Agent AI System
+        server: my-local-server
+        container: odysseus
+    - Glances:
+        icon: glances
+        href: https://glances.archbox.local
+        description: Real-Time Host Hardware Monitor
+        server: my-local-server
+        container: glances_metrics
+    - Ntfy:
+        icon: ntfy
+        href: https://ntfy.archbox.local
+        description: HTTP-Based Pub/Sub Push Service
+        server: my-local-server
+        container: ntfy
+    - SearXNG:
+        icon: searxng
+        href: https://search.archbox.local
+        description: Privacy-Respecting Metasearch Engine
+        server: my-local-server
+        container: searxng
+    - ChromaDB:
+        icon: chroma
+        description: Embeddings Vector Store Engine
+        server: my-local-server
+        container: chromadb

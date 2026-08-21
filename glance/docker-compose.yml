@@ -1,0 +1,28 @@
+# Docker Compose file for Glance application
+
+services:
+  glance:
+    image: glanceapp/glance
+    container_name: glance
+    ports:
+      - "127.0.0.1:8081:8080"
+
+    volumes:
+      - ./config:/app/config
+      - ./assets:/app/assets
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
+
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true

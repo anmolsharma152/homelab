@@ -1,0 +1,18 @@
+services:
+  glances:
+    image: nicolargo/glances:latest-full
+    container_name: glances_metrics
+    pid: host
+    ports:
+      - "127.0.0.1:61208:61208"
+    environment:
+      - GLANCES_OPT=-w
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: "no"
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true

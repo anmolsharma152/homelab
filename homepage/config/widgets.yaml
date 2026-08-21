@@ -1,0 +1,21 @@
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+
+- search:
+    provider: google
+    target: _self
+    focus: true
+
+- openmeteo:
+    label: Jaipur
+    latitude: 26.9124
+    longitude: 75.7873
+    timezone: Asia/Kolkata
+    units: metric
+
+- datetime:
+    format:
+      timeStyle: short
+      dateStyle: medium

@@ -1,0 +1,24 @@
+services:
+  searxng:
+    container_name: searxng
+    image: searxng/searxng:latest
+    restart: "no"
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=https://search.localhost/
+      - SEARXNG_REDIS_URL=redis://redis:6379/0
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    networks:
+      - homelab
+
+networks:
+  homelab:
+    external: true

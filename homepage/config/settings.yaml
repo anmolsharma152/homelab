@@ -1,0 +1,14 @@
+title: Arch Dashboard
+theme: dark
+
+layout:
+  Developer & Tech:
+  AI Chatbots:
+  Career & Social:
+  Media:
+  Active:
+    style: row
+    columns: 4
+  Inactive:
+    style: row
+    columns: 6

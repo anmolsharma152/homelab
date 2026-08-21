@@ -1,0 +1,39 @@
+archbox.local, homepage.archbox.local, homepage.localhost {
+	tls internal
+	reverse_proxy homepage:3000
+}
+
+glance.archbox.local, glance.localhost {
+	tls internal
+	reverse_proxy glance:8080
+}
+
+search.archbox.local, search.localhost {
+	tls internal
+	reverse_proxy searxng:8080
+}
+
+openwebui.archbox.local, openwebui.localhost {
+	tls internal
+	reverse_proxy open-webui:8080
+}
+
+algodeck.archbox.local, algodeck.localhost {
+	tls internal
+	reverse_proxy algodeck_app:3000
+}
+
+odysseus.archbox.local, odysseus.localhost {
+	tls internal
+	reverse_proxy odysseus-odysseus-1:7000
+}
+
+ntfy.archbox.local, ntfy.localhost {
+	tls internal
+	reverse_proxy ntfy:80
+}
+
+glances.archbox.local, glances.localhost {
+	tls internal
+	reverse_proxy glances_metrics:61208
+}

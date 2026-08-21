@@ -1,0 +1,67 @@
+- Developer & Tech:
+    - GitHub:
+        - icon: si-github
+          href: https://github.com/
+    - NeetCode Roadmap:
+        - icon: mdi-code-array
+          href: https://neetcode.io/roadmap
+    - Hugging Face:
+        - icon: si-huggingface
+          href: https://huggingface.co/
+    - Code & Debug:
+        - icon: mdi-code-braces
+          href: https://learn.codeanddebug.in/
+    - AWS Builders:
+        - icon: si-amazonaws
+          href: https://builder.aws/
+
+- AI Chatbots:
+    - Claude AI:
+        - icon: si-anthropic
+          href: https://claude.ai/new
+    - ChatGPT:
+        - icon: si-openai
+          href: https://chatgpt.com/
+    - Gemini AI:
+        - icon: si-googlegemini
+          href: https://gemini.google.com/app
+    - Meta AI:
+        - icon: si-meta
+          href: https://www.meta.ai/
+    - Grok AI:
+        - icon: si-x
+          href: https://grok.com/
+
+- Career & Social:
+    - LinkedIn:
+        - icon: si-linkedin
+          href: https://www.linkedin.com/feed/
+    - Naukri:
+        - icon: mdi-briefcase-search
+          href: https://www.naukri.com/
+    - Reddit:
+        - icon: si-reddit
+          href: https://www.reddit.com/
+    - X (Twitter):
+        - icon: si-x
+          href: https://x.com/home
+    - Instagram:
+        - icon: si-instagram
+          href: https://www.instagram.com/
+
+- Media:
+    - YouTube:
+        - icon: si-youtube
+          href: https://www.youtube.com/
+    - Chess.com:
+        - icon: si-chessdotcom
+          href: https://www.chess.com/home
+    - Twitch:
+        - icon: si-twitch
+          href: https://www.twitch.tv/
+    - Kick:
+        - icon: si-kick
+          href: https://kick.com/
+    - Rumble:
+        - icon: si-rumble
+          href: https://rumble.com/

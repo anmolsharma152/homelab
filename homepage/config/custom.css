@@ -1,0 +1,344 @@
+/* Center dashboard vertically */
+#__next,
+#app,
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 85vh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========================================================================= */
+/* Header Layout                                                             */
+/* ========================================================================= */
+
+#information-widgets {
+  width: 100% !important;
+  margin-bottom: 1.5rem !important;
+}
+
+#widgets-wrap {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+  gap: 2rem !important;
+}
+
+div[class*="information-widget-resource"],
+#widgets-wrap > div:first-child div,
+#widgets-wrap > div:first-child span {
+  font-size: 1.05rem !important;
+  font-weight: 500 !important;
+}
+
+#widgets-wrap > div:first-child svg {
+  width: 1.3rem !important;
+  height: 1.3rem !important;
+}
+
+form.information-widget-search {
+  display: flex !important;
+  align-items: center !important;
+  position: relative !important;
+  flex: 0 1 auto !important;
+  width: 100% !important;
+  max-width: 560px !important;
+  margin: 0 auto !important;
+  height: 40px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+form.information-widget-search div.h-8,
+form.information-widget-search div[class*="relative"] {
+  margin: 0 !important;
+  height: 40px !important;
+  width: 100% !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+form.information-widget-search input {
+  flex: 1 1 auto !important;
+  height: 40px !important;
+  background-color: rgba(30, 41, 59, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
+  padding-left: 1.1rem !important;
+  padding-right: 2.75rem !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease !important;
+}
+
+form.information-widget-search input:focus {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  background-color: rgba(30, 41, 59, 0.85) !important;
+  outline: none !important;
+}
+
+form.information-widget-search button,
+form.information-widget-search svg:not([class*="resource"]) {
+  display: none !important;
+}
+
+#information-widgets-right {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex: 1 1 auto !important;
+  justify-content: flex-end !important;
+  gap: 2rem !important;
+  white-space: nowrap !important;
+}
+
+#information-widgets-right > div {
+  flex: 0 0 auto !important;
+}
+
+#information-widgets-right > div:last-child {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  white-space: nowrap !important;
+}
+
+div[class*="openmeteo"],
+div[class*="openmeteo"] span,
+div[class*="openmeteo"] p,
+div[class*="openmeteo"] div,
+div[class*="datetime"],
+div[class*="datetime"] span,
+div[class*="datetime"] p,
+#information-widgets-right > div:last-child span,
+#information-widgets-right > div:last-child p {
+  font-size: 1.02rem !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+#information-widgets-right > div:last-child div[class*="flex-col"],
+div[class*="openmeteo"] div[class*="flex-col"] {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+}
+
+#information-widgets-right > div:last-child svg {
+  width: 1.4rem !important;
+  height: 1.4rem !important;
+}
+
+/* ========================================================================= */
+/* Base card styling — shared by bookmarks and both service rows            */
+/* ========================================================================= */
+div.container li {
+  background-color: rgba(30, 41, 59, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  margin-bottom: 0.35rem !important;
+  height: 50px !important;
+  overflow: hidden !important;
+  list-style: none !important;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease !important;
+}
+
+div.container li:hover {
+  background-color: rgba(30, 41, 59, 0.85) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+div.container li > a,
+div.container li > div {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 0.7rem !important;
+  height: 100% !important;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  box-sizing: border-box !important;
+}
+
+div.container li img,
+div.container li svg:not([class*="resource"]) {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  min-width: 1.5rem !important;
+  flex-shrink: 0 !important;
+  object-fit: contain !important;
+}
+
+div.container li h4,
+div.container li div[class*="font-"] {
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+div.container li p,
+div.container li span[class*="text-"] {
+  font-size: 0.85rem !important;
+  opacity: 0.6 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+div.container h2,
+div.container h3 {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+  margin-bottom: 0.4rem !important;
+}
+
+div.container li span[class*="rounded"],
+div.container li div[class*="status"],
+div.container li span[class*="text-xs"],
+div.container li span[class*="text-["] {
+  font-size: 0.7rem !important;
+  line-height: 0.9rem !important;
+  padding: 0.14rem 0.4rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  border-radius: 4px !important;
+  transform: scale(0.9) !important;
+  transform-origin: right center !important;
+  flex-shrink: 0 !important;
+}
+
+/* ========================================================================= */
+/* Bookmark text — slightly larger                                           */
+/* ========================================================================= */
+li.bookmark .bookmark-name {
+  font-size: 0.9rem !important;
+}
+
+li.bookmark .bookmark-description {
+  font-size: 0.78rem !important;
+}
+
+/* ========================================================================= */
+/* Group widths: bookmarks 4/row, Active + Inactive each take a full row     */
+/* ========================================================================= */
+.bookmark-group {
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  flex-basis: 25% !important;
+  max-width: 25% !important;
+  box-sizing: border-box !important;
+}
+
+.services-group {
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  flex-basis: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ========================================================================= */
+/* Active row (#layout-groups child 5) — taller cards, stats always visible  */
+/* ========================================================================= */
+#layout-groups > div:nth-child(5) button {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+#layout-groups > div:nth-child(5) button svg {
+  display: none !important;
+}
+
+#layout-groups > div:nth-child(5) ul {
+  display: grid !important;
+}
+
+#layout-groups > div:nth-child(5) li {
+  height: auto !important;
+  min-height: 80px !important;
+}
+
+#layout-groups > div:nth-child(5) li > a,
+#layout-groups > div:nth-child(5) li > div {
+  flex-wrap: wrap !important;
+  padding: 0.5rem 0.7rem !important;
+}
+
+#layout-groups > div:nth-child(5) .service-stats {
+  max-height: none !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  width: 100% !important;
+  margin-top: 0.4rem !important;
+  padding-top: 0.35rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  column-gap: 0.9rem !important;
+  row-gap: 0.15rem !important;
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  pointer-events: none !important;
+  white-space: nowrap !important;
+}
+
+#layout-groups > div:nth-child(5) .service-stats span {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+}
+
+#layout-groups > div:nth-child(5) .service-stats svg {
+  width: 0.85rem !important;
+  height: 0.85rem !important;
+}
+
+#layout-groups > div:nth-child(5) [class*="status"] {
+  pointer-events: none !important;
+}
+
+/* ========================================================================= */
+/* Inactive row (#layout-groups child 6) — compact single line, no stats     */
+/* ========================================================================= */
+#layout-groups > div:nth-child(6) li {
+  height: 44px !important;
+}
+
+#layout-groups > div:nth-child(6) .service-stats {
+  display: none !important;
+}
+
+#layout-groups > div:nth-child(6) [class*="status"] {
+  pointer-events: none !important;
+}

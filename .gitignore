@@ -1,0 +1,12 @@
+# Ignore all container runtime data & databases
+**/data/
+**/postgres_data/
+**/redis_data/
+**/chroma_data/
+**/logs/
+*.db
+*.sqlite
+
+# Ignore live secrets
+**/.env
+!**/.env.example
