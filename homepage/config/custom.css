@@ -342,3 +342,88 @@ li.bookmark .bookmark-description {
 #layout-groups > div:nth-child(6) [class*="status"] {
   pointer-events: none !important;
 }
+
+/* ========================================================================= */
+/* Responsive Mobile & Tablet Breakpoints                                    */
+/* ========================================================================= */
+
+/* Tablet & medium screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .bookmark-group {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  #layout-groups > div:nth-child(5) ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  #layout-groups > div:nth-child(6) ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  #__next,
+  #app,
+  main {
+    justify-content: flex-start !important;
+    min-height: auto !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  #widgets-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 1rem !important;
+  }
+
+  #widgets-wrap > div:first-child {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  form.information-widget-search {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0.25rem 0 !important;
+  }
+
+  #information-widgets-right {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+  }
+
+  .bookmark-group {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+
+  #layout-groups > div:nth-child(5) ul {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  #layout-groups > div:nth-child(6) ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+}
+
+/* Extra small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  #layout-groups > div:nth-child(6) ul {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  #information-widgets-right > div:last-child {
+    gap: 0.75rem !important;
+  }
+}
