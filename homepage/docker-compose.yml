@@ -11,6 +11,9 @@ services:
     environment:
       - HOMEPAGE_ALLOWED_HOSTS=*
       - TZ=Asia/Kolkata
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     restart: unless-stopped
     networks:
       - homelab
